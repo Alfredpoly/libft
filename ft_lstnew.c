@@ -1,23 +1,14 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*ptr;
-	int		len;
 
-	if (!content)
-		return (NULL);
-	len = ft_strlen(content);
-	ptr = malloc(len * sizeof(char));
+	ptr = malloc(sizeof(t_list));
 	if (!ptr)
-		return (NULL);
+		return (0);
 	ptr->content = content;
-	ptr->next = NULL;
+	ptr->next = 0;
 	return (ptr);
 }
-
-// int main() {
-// 	ft_lstnew(((void *)0));
-// }
