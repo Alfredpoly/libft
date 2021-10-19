@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int	charset(char c, char *set)
@@ -19,8 +17,8 @@ int	charset(char c, char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ptr;
-	int		i;
-	int		j;
+	size_t		i;
+	size_t		j;
 	int		k;
 
 	if (!s1)

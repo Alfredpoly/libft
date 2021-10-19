@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	n = size - dlen;
 	if (n == 0)
 		return (dlen + slen);
-	while (*s != '\0')
+	while (*s != '\0' && n)
 	{
 		if (n-- != 1)
 			*d++ = *s;
@@ -31,14 +31,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 // int main() {
-
-// 	printf("%zu", strlcat("there is no stars in the sky", "the cake is a lie !\0I'm hidden lol\r\n", strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4));
-// 	// puts(dest); 
-// 	// printf("%lu\n", strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4);
-// 	// printf("%zu", ft_strlcat("there is no stars", "the cake is a lie !\0I'm hidden lol\r\n", 23));
-// 	printf("%zu",ft_strlcat("there is no stars in the sky", "the cake is a lie !\0I'm hidden lol\r\n", strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4));
-// 	// ft_strlcat("there is no stars in the sky", "the cake is a lie !\0I'm hidden lol\r\n", 23);
-// 	//puts(dest2); 
+// 	char *dest = "BBBB     ";
+// 	ft_strlcat(dest, "AAAAAAAAA", 6);
+// 	puts(dest);
 
 // 	return 0;
 // }

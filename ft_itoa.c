@@ -25,11 +25,11 @@ char	*ft_itoa(int n)
 	int		count;
 
 	count = intlen(n);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	ptr = malloc((count + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		n = n * -1;

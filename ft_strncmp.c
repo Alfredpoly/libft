@@ -9,14 +9,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (*s1++ != *s2++)
 			return ((*(unsigned char *)--s1) - (*(unsigned char *)--s2));
-		else if (*s1 == '\0')
+		else if (*s1 == '\0' && *s2 == '\0')
 			break ;
 	}
 	return (0);
 }
 
 // int main() {
-// 	printf("%d\n", strncmp("abcdef", "abcdefghijklmnop", 6));
-// 	printf("%d", ft_strncmp("abcdef", "abcdefghijklmnop", 6));
+// 	printf("%d\n", strncmp("gfgTripouille", "TripouilleX", 42));
+// 	printf("%d", ft_strncmp("fgTripouille", "TripouilleX", 42));
 // 	ft_strncmp("abcdef", "abcdefghijklmnop", 6);
 // }
