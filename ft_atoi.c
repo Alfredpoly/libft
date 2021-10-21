@@ -27,12 +27,3 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * sign);
 }
-
-// int main()
-// {
-//     char a[] = "   -085";
-//     int value = atoi(a);
-// 	int ft_value = ft_atoi(a);
-//     printf("Value = %d\nft_Value = %d\n", value, ft_value);
-//     return 0;
-// }

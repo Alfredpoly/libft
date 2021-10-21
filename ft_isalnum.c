@@ -8,22 +8,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-// int main()
-// {
-
-// 	unsigned char c;
-// 	c = '1';
-// 	printf("%d", isalnum(c));
-// 	printf("%d\n", ft_isalnum(c));
-
-// 	c = 'h';
-// 	printf("%d", isalnum(c));
-// 	printf("%d\n", ft_isalnum(c));
-
-// 	c = '+';
-// 	printf("%d", isalnum(c));
-// 	printf("%d\n", ft_isalnum(c));
-
-// 	return 0;
-// }

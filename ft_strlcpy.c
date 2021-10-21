@@ -23,17 +23,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (srclen);
 }
-
-// int main() {
-// 	char dest[] = "rrr";
-// 	char src[] = "testlo";
-// 	char dest2[] = "rrr";
-// 	char src2[] = "testlo";
-
-// 	strlcpy(dest, src, 4);
-// 	puts(dest); 
-// 	ft_strlcpy(dest2, src2, 4);
-// 	puts(dest2); 
-
-// 	return 0;
-// }

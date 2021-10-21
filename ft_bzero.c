@@ -12,17 +12,3 @@ void	ft_bzero(void *dest, size_t len)
 		dest++;
 	}
 }
-
-// int main () {
-//    char str[50];
-
-//    strcpy(str,"This is string.h library function");
-//    printf("%s\n",str);
-
-//    bzero(str, 7);
-//    printf("%s\n", str);
-
-//    ft_bzero(str,7);
-//    printf("%s", str);
-//    return(0);
-// }

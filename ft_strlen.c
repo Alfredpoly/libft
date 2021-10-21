@@ -11,15 +11,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
-
-// int	main()
-// {
-// 	char *str = "test";
-// 	int len = strlen(str);
-// 	int len2 = ft_strlen(str);
-// 	printf("%s\n", str);
-// 	printf("%d\n", len);
-// 	printf("%d", len2);
-
-// 	return 0;
-// }

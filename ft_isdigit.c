@@ -8,21 +8,3 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-// int main()
-// {
-
-// 	unsigned char c;
-// 	c = '1';
-// 	printf("%d", isdigit(c));
-// 	printf("%d\n", ft_isdigit(c));
-
-// 	c = 'h';
-// 	printf("%d", isdigit(c));
-// 	printf("%d\n", ft_isdigit(c));
-
-// 	c = '+';
-// 	printf("%d", isdigit(c));
-// 	printf("%d\n", ft_isdigit(c));
-
-// 	return 0;
-// }

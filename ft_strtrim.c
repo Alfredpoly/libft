@@ -42,9 +42,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ptr[k++] = s1[i++];
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char s1[] = "          ";
-// 	printf("%s", ft_strtrim(s1, " "));
-// }

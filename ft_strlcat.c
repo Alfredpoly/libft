@@ -27,11 +27,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	*d = '\0';
 	return (dlen + slen);
 }
-
-// int main() {
-// 	char *dest = "BBBB     ";
-// 	ft_strlcat(dest, "AAAAAAAAA", 6);
-// 	puts(dest);
-
-// 	return 0;
-// }

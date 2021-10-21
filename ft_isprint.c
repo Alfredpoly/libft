@@ -8,21 +8,3 @@ int	ft_isprint(int c)
 		return (0);
 }
 
-// int main()
-// {
-
-// 	unsigned char c;
-// 	c = '1';
-// 	printf("%d", isprint(c));
-// 	printf("%d\n", ft_isprint(c));
-
-// 	c = 'h';
-// 	printf("%d", isprint(c));
-// 	printf("%d\n", ft_isprint(c));
-
-// 	c = '+';
-// 	printf("%d", isprint(c));
-// 	printf("%d\n", ft_isprint(c));
-
-// 	return 0;
-// }

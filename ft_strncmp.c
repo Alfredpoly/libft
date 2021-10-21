@@ -13,9 +13,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main() {
-// 	printf("%d\n", strncmp("gfgTripouille", "TripouilleX", 42));
-// 	printf("%d", ft_strncmp("fgTripouille", "TripouilleX", 42));
-// 	ft_strncmp("abcdef", "abcdefghijklmnop", 6);
-// }

@@ -21,20 +21,3 @@ char	*ft_strdup(const char *s1)
 	ptr[j] = '\0';
 	return (ptr);
 }
-
-// int main()
-// {
-//     char source[] = "I malloc so I am.";
-
-//     // A copy of source is created dynamically
-//     // and pointer to copy is returned.
-//     char* target;
-// 	target = strdup(source);
-
-// 	char* test;
-// 	test = strdup(source);
-
-//     printf("%s\n", target);
-// 	printf("%s", test);
-//     return 0;
-// }

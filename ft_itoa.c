@@ -44,8 +44,3 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_itoa(-2147483648));
-// }
