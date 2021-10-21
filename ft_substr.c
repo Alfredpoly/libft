@@ -6,16 +6,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	ptr = malloc((len + 1) * sizeof(char));
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
+	ptr = ft_calloc((len + 1), sizeof(char));
 	if (!s || !ptr)
 		return (NULL);
-	while (start < ft_strlen(s) && len != 0)
+	while (start < ft_strlen(s) && len > 0)
 	{
 		ptr[i] = s[start];
 		start++;
 		len--;
 		i++;
 	}
-	ptr[i] = '\0';
 	return (ptr);
 }
