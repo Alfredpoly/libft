@@ -1,4 +1,4 @@
-NAME = libft
+NAME = libft.a
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
@@ -12,28 +12,36 @@ c-files = ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_st
 			ft_strjoin.c ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c 
 
-c-bonus = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c ft_lstadd_back_bonus.c
+c-bonus = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstdelone.c \
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstadd_back.c
 
 o-bonus = $(c-bonus:.c=.o)
 o-files = $(c-files:.c=.o)
 
-ar: $(NAME).a
+ifdef WITH_BONUS
+OBJ_FILES = $(o-files) $(o-bonus)
+else
+OBJ_FILES = $(o-files)
+endif
 
-$(NAME).a: $(o-files)
-	$(AR) $(NAME).a $(o-files)
+all: $(NAME)
 
-bonus: $(NAME).a
+# $(NAME): $(OBJ_FILES)
+# 	$(CC) -o $@ $^
 
-$(NAME).a: $(o-bonus)
-	$(AR) $(NAME).a $(o-bonus)
+%.o: %.c
+	$(CC) -c $(CFLAGS) -o $@ $<
 
-all: $(c-files)
+$(NAME): $(OBJ_FILES)
+	$(AR) $(NAME) $(OBJ_FILES)
 
 clean:
-	$(RM) $(o-files) $(o-bonus)
+	rm -f $(o-files) $(o-bonus)
 
-fclean:
-	$(RM) $(basename $(c-files)) $(basename $(o-files))
+fclean: clean
+	rm -f $(NAME)
 
-re: clean ar bonus
+re: fclean all
+
+bonus:
+	$(MAKE) WITH_BONUS=1
