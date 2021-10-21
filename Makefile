@@ -18,10 +18,14 @@ c-bonus = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlas
 o-bonus = $(c-bonus:.c=.o)
 o-files = $(c-files:.c=.o)
 
-ar: $(o-files)
+ar: $(NAME).a
+
+$(NAME).a: $(o-files)
 	$(AR) $(NAME).a $(o-files)
 
-bonus: $(o-bonus)
+bonus: $(NAME).a
+
+$(NAME).a: $(o-bonus)
 	$(AR) $(NAME).a $(o-bonus)
 
 all: $(c-files)
