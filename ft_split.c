@@ -45,7 +45,7 @@ int	countchar(char const *s, int i, char c)
 	return (nbchar);
 }
 
-char	**ft_split(char const *s, char c)
+char	**createarr(char const *s, char c)
 {
 	char	**arr;
 	int		i;
@@ -54,10 +54,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	s = ft_strtrim(s, &c);
 	arr = ft_calloc((countstr(s, c) + 1), sizeof(char *));
 	if (!arr)
-		return (NULL);
+		return (0);
 	while (s[i] != '\0')
 	{
 		k = 0;
@@ -70,23 +69,17 @@ char	**ft_split(char const *s, char c)
 			i++;
 		j++;
 	}
-	free((void *)s);
 	return (arr);
 }
 
-// int	main()
-// {
-// 	char *s =" split thisd dsuhds    dsd ";
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
 
-// 	char **arr = ft_split(s, ' ');
-// 	int i;
-
-// 	// printf("%s", arr[0]);
-// 	i = 0;
-// 	while (i != 1)
-// 	{
-// 		printf("%s\n", arr[i]);
-// 		i++;
-// 	}
-// 	// check_leaks();
-// }
+	s = ft_strtrim(s, &c);
+	if (!s)
+		return (0);
+	arr = createarr(s, c);
+	free((void *)s);
+	return (arr);
+}

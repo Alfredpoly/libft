@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -9,15 +8,11 @@ char	*ft_strrchr(const char *str, int c)
 	ch = c;
 	first = *str;
 	while (*str != '\0')
-	{
 		str++;
-	}
 	while (*str != ch)
 	{
 		if (*str == first)
-		{
 			return (NULL);
-		}
 		str--;
 	}
 	return ((char *)str);

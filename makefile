@@ -18,9 +18,6 @@ c-bonus = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstdelone.c
 o-bonus = $(c-bonus:.c=.o)
 o-files = $(c-files:.c=.o)
 
-# .c.o: $(c-files)
-# 	$(CC) $(CFLAGS) -o $(basename $(c-files)) $(c-files)
-
 ar: $(o-files)
 	$(AR) $(NAME).a $(o-files)
 
@@ -30,4 +27,9 @@ bonus: $(o-bonus)
 all: $(c-files)
 
 clean:
-	$(RM) $(o-files)
+	$(RM) $(o-files) $(o-bonus)
+
+fclean:
+	$(RM) $(basename $(c-files)) $(basename $(o-files))
+
+re: clean ar bonus

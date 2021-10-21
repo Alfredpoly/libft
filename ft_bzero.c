@@ -1,15 +1,15 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	ft_bzero(char *str, int nb)
+void	ft_bzero(void *dest, size_t len)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i <= nb - 1)
+	while (i <= len - 1 && len != 0)
 	{
-		str[i] = '\0';
+		*(char *)dest = '\0';
 		i++;
+		dest++;
 	}
 }
 

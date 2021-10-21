@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -14,7 +12,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	ptr = malloc((s1len + s2len) * sizeof(char));
+	ptr = ft_calloc((s1len + s2len + 1), sizeof(char));
 	if (!ptr)
 		return (NULL);
 	while (s1len-- != 0)
@@ -27,7 +25,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		ptr[i] = *s2++;
 		i++;
 	}
-	ptr[i] = '\0';
 	return (ptr);
 }
 

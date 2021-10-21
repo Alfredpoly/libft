@@ -2,7 +2,7 @@
 
 int	charset(char c, char *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i] != '\0')
@@ -17,8 +17,8 @@ int	charset(char c, char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ptr;
-	size_t		i;
-	size_t		j;
+	size_t	i;
+	size_t	j;
 	int		k;
 
 	if (!s1)
@@ -28,22 +28,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1);
 	while (charset(s1[i], (char *)set) == 1)
 		i++;
-	while (charset(s1[j - 1], (char *)set) == 1)
+	while ((charset(s1[j - 1], (char *)set) == 1) && s1[i] != '\0')
 		j--;
 	if (i == ft_strlen(s1))
+	{
+		j = 0;
 		i = 0;
-	ptr = malloc((j - i + 1) * sizeof(char));
+	}
+	ptr = ft_calloc((j - i + 1), sizeof(char));
 	if (!ptr)
 		return (NULL);
 	while (i != j)
-	{
 		ptr[k++] = s1[i++];
-	}
-	ptr[k] = '\0';
 	return (ptr);
 }
 
 // int main()
 // {
-// 	printf("%s", ft_strtrim("    \t  \n\n   \t  \n\n  ", " \t\n"));
+// 	char s1[] = "          ";
+// 	printf("%s", ft_strtrim(s1, " "));
 // }
