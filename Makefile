@@ -26,14 +26,12 @@ endif
 
 all: $(NAME)
 
-# $(NAME): $(OBJ_FILES)
-# 	$(CC) -o $@ $^
+$(NAME): $(OBJ_FILES)
+	$(AR) $(NAME) $(OBJ_FILES)
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(NAME): $(OBJ_FILES)
-	$(AR) $(NAME) $(OBJ_FILES)
 
 clean:
 	rm -f $(o-files) $(o-bonus)
@@ -43,5 +41,5 @@ fclean: clean
 
 re: fclean all
 
-bonus:
+bonus: 
 	$(MAKE) WITH_BONUS=1

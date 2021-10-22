@@ -1,5 +1,3 @@
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
 	if ((060 <= c) && (c <= 071))
