@@ -2,15 +2,6 @@
 
 To use the library, you will need to compile it into a static library file (.a). This can be done by running the make command in the project directory. This will compile all the necessary files and create the libft.a file in the same directory.
 
-You can then link this library file with your own project by including the following flag when compiling:
-
-bash
-
--L/path/to/libft -lft
-
-Replace /path/to/libft with the path to the directory containing libft.a.
-List of functions
-
 The library contains a wide variety of functions, including:
 
 * ft_atoi: Converts a string to an integer.
